@@ -1,0 +1,73 @@
+{
+	"folders": [
+		{
+			"name": "SSH FS - Glassfish Server",
+			"uri": "ssh://glassfish_server/"
+		},
+		{
+			"name": "SSH FS - Web Server",
+			"uri": "ssh://web_server/"
+		},
+		{
+			"name": "SSH FS - Internal Server",
+			"uri": "ssh://aws_iss/"
+		}
+	],
+	"settings": {
+		"yaml.customTags": [
+			"!And",
+			"!And sequence",
+			"!If",
+			"!If sequence",
+			"!Not",
+			"!Not sequence",
+			"!Equals",
+			"!Equals sequence",
+			"!Or",
+			"!Or sequence",
+			"!FindInMap",
+			"!FindInMap sequence",
+			"!Base64",
+			"!Join",
+			"!Join sequence",
+			"!Cidr",
+			"!Ref",
+			"!Sub",
+			"!Sub sequence",
+			"!GetAtt",
+			"!GetAZs",
+			"!ImportValue",
+			"!ImportValue sequence",
+			"!Select",
+			"!Select sequence",
+			"!Split",
+			"!Split sequence"
+		],
+		"sshfs.configs": [
+			{
+				"name": "web_server",
+				"group": "AWS",
+				"label": "Web Server",
+				"host": "www.local.siraisi.co.jp",
+				"username": "ec2-user",
+				"privateKeyPath": "$HOME/.ssh/id_rsa.aws"
+			},
+			{
+				"name": "aws_iss",
+				"label": "Internal Server",
+				"host": "aws-iss.local.siraisi.co.jp",
+				"username": "ec2-user",
+				"privateKeyPath": "$HOME/.ssh/id_rsa.aws",
+				"group": "AWS"
+			},
+			{
+				"name": "glassfish_server",
+				"label": "Glassfish Server",
+				"group": "AWS",
+				"host": "glassfish.local.siraisi.co.jp",
+				"username": "ec2-user",
+				"privateKeyPath": "$HOME/.ssh/id_rsa.aws"
+			}
+		]
+	}
+}

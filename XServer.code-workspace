@@ -1,0 +1,57 @@
+{
+	"folders": [
+		{
+			"name": "SSH FS - XServer",
+			"uri": "ssh://xserver/home/siraisi"
+		},
+		{
+			"uri": "ssh://xserver/home/siraisi/s-pan.jp/public_html/private/develop/comment"
+		},
+		{
+			"uri": "ssh://xserver/home/siraisi/panopano.jp/public_html"
+		}
+	],
+	"settings": {
+		"yaml.customTags": [
+			"!And",
+			"!And sequence",
+			"!If",
+			"!If sequence",
+			"!Not",
+			"!Not sequence",
+			"!Equals",
+			"!Equals sequence",
+			"!Or",
+			"!Or sequence",
+			"!FindInMap",
+			"!FindInMap sequence",
+			"!Base64",
+			"!Join",
+			"!Join sequence",
+			"!Cidr",
+			"!Ref",
+			"!Sub",
+			"!Sub sequence",
+			"!GetAtt",
+			"!GetAZs",
+			"!ImportValue",
+			"!ImportValue sequence",
+			"!Select",
+			"!Select sequence",
+			"!Split",
+			"!Split sequence"
+		],
+		"sshfs.configs": [
+			{
+				"name": "xserver",
+				"label": "XServer",
+				"host": "sv3128.xserver.jp",
+				"port": 10022,
+				"root": "/home/siraisi",
+				"username": "siraisi",
+				"privateKeyPath": "$HOME/.ssh/id_rsa.xserver.ne.jp",
+				"passphrase": "skzr9akk"
+			}
+		]
+	}
+}
