@@ -6,9 +6,6 @@
 		},
 		{
 			"uri": "ssh://xserver/home/siraisi/s-pan.jp/public_html/private/develop/comment"
-		},
-		{
-			"uri": "ssh://xserver/home/siraisi/panopano.jp/public_html"
 		}
 	],
 	"settings": {
