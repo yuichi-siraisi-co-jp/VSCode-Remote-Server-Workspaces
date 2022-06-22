@@ -1,0 +1,10 @@
+{
+	"folders": [
+		{
+			"path": "../Data-View"
+		}
+	],
+	"settings": {
+		"java.configuration.updateBuildConfiguration": "automatic"
+	}
+}

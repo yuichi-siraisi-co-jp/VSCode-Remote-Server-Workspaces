@@ -2,7 +2,11 @@
 	"folders": [
 		{
 			"name": "SSH FS - XServer",
-			"uri": "ssh://xserver/home/siraisi"
+			"uri": "ssh://xserver/home/siraisi/s-pan.jp/public_html/private/develop/comment"
+		},
+		{
+			"name": "SSH FS - Glassfish Server",
+			"uri": "ssh://glassfish_server/home/ec2-user/cron/s-pan.jp_comment"
 		}
 	],
 	"settings": {
@@ -41,10 +45,18 @@
 				"label": "XServer",
 				"host": "sv3128.xserver.jp",
 				"port": 10022,
-				"root": "/home/siraisi",
+				"root": "~/s-pan.jp/public_html/private/develop/comment/",
 				"username": "siraisi",
 				"privateKeyPath": "$HOME/.ssh/id_rsa.xserver.ne.jp",
 				"passphrase": "skzr9akk"
+			},
+			{
+				"name": "glassfish_server",
+				"label": "Glassfish Server",
+				"privateKeyPath": "$HOME/.ssh/id_rsa.aws",
+				"host": "glassfish.local.siraisi.co.jp",
+				"root": "~/cron/s-pan.jp_comment/",
+				"username": "ec2-user"
 			}
 		]
 	}
